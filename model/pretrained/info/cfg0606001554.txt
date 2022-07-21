@@ -1,0 +1,29 @@
+{'model_summary': ==========================================================================================
+Layer (type:depth-idx)                   Output Shape              Param #
+==========================================================================================
+LSTMNet                                  --                        --
+├─Linear: 1-1                            [4, 64, 25]               25,625
+├─Tanh: 1-2                              [4, 64, 25]               --
+├─LSTM: 1-3                              [4, 64, 25]               5,200
+├─Tanh: 1-4                              [4, 64, 25]               --
+├─Linear: 1-5                            [4, 64, 512]              13,312
+├─Sigmoid: 1-6                           [4, 64, 512]              --
+==========================================================================================
+Total params: 44,137
+Trainable params: 44,137
+Non-trainable params: 0
+Total mult-adds (M): 1.49
+==========================================================================================
+Input size (MB): 1.05
+Forward/backward pass size (MB): 1.15
+Params size (MB): 0.18
+Estimated Total Size (MB): 2.38
+==========================================================================================, 'optimizer': Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 0.001
+    maximize: False
+    weight_decay: 0
+), 'epochs': 200, 'loss_function': SmoothL1Loss()}
